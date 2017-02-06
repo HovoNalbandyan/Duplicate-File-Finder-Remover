@@ -23,5 +23,10 @@ namespace FormFinder
             var output = new FinderRemover();
             MessageBox.Show($"Found {output.Finder(textBox3.Text, textBox1.Text)} duplicates") ;
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
