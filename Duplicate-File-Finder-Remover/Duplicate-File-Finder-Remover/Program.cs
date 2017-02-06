@@ -13,10 +13,10 @@ namespace Duplicate_File_Finder_Remover
         {
             var finder = new FinderRemover();
             var matches = finder.Finder("1.JPG",@"D:\Media\MUSICCCCCCCCCCCCCCCCCCCCC");
-            //foreach (var item in matches)
-            //{
-                //Console.WriteLine(item);
-            //}
+            foreach (var item in matches)
+            {
+                Console.WriteLine(item);
+            }
             Console.ReadKey();
         }
     }

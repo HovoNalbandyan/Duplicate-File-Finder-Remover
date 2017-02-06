@@ -18,12 +18,12 @@ namespace DuplicateFileFinder
             }
             return matches.Count;
         }
-        //     st
+       
         ring[] directories = fullPath.Split('\\');
-   //     string subPath = "";
-   //         for (int i = 0; i<directories.Length-1; i++)
-   //         {
-   //             subPath += directories[i] + @"\";
-			//}
+        string subPath = "";
+            for (int i = 0; i<directories.Length-1; i++)
+            {
+                subPath += directories[i] + @"\";
+			}
 }
 }
