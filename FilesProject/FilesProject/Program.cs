@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace DFFR
+namespace FilesProject
 {
     static class Program
     {
@@ -15,10 +14,9 @@ namespace DFFR
         [STAThread]
         static void Main()
         {
-
-            System.Windows.Forms.Application.EnableVisualStyles();
-            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            System.Windows.Forms.Application.Run(new DFFR_Form());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }

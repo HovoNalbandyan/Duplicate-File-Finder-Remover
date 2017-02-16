@@ -20,34 +20,43 @@ namespace DFFR
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-                  
             
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            List<string> myelements = new List<string>();
+
+            string name;
             string path;
             path = textBox1.Text;
+            name = textBox2.Text;
             if (path == null)
             {
                 MessageBox.Show("Input Path");
+                return;
             }
 
             DirectoryInfo di = new DirectoryInfo(path);
 
-            if ( di.Exists) 
+            if (di.Exists)
+            {
+                FileInfo[] arr = di.GetFiles();
+                foreach (FileInfo file in arr)
                 {
-                    FileInfo[] arr = di.GetFiles();
-                    foreach (FileInfo file in arr)
+                    if (file.Name == name)
                     {
-                        MessageBox.Show( file.FullName);
+                        myelements.Add(name);
                     }
-                    MessageBox.Show("  ");
                 }
-                else
-                    MessageBox.Show("input Right path   ");
-            
+            }
+            else
+            {
+                MessageBox.Show("input Right path   ");
+                textBox1.Text = "";
+            }
+               
+
         }
     }
 }
