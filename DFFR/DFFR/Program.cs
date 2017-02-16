@@ -8,17 +8,16 @@ using static System.Net.Mime.MediaTypeNames;
 namespace DFFR
 { 
     static class Program
-    {
-        /// <summary>
+    {   /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
 
-           System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-           System.Windows.Forms.Application.Run(new DFFR_Form());
+            System.Windows.Forms.Application.Run(new DFFR_Form());
         }
     }
 }

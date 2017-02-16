@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace DFFR
 {
     public partial class DFFR_Form : Form
@@ -38,6 +39,7 @@ namespace DFFR
            List<string> myelements = new List<string>();
             string name;
             string path;
+            int count = 0;
             path = textBox1.Text;
             name = textBox2.Text;
             DirectoryInfo di = new DirectoryInfo(path);
@@ -62,31 +64,18 @@ namespace DFFR
                     if (name == file.Name)
                     {                        
                         myelements.Add(Name);
+                        
                     }
-                    MessageBox.Show(file.Name);
+                    count += 1;
+                    
                 }
             }
-            
+
+            MessageBox.Show(count.ToString());
+
+           
           
-            //--------------------------------------------------
-            //using (SqlCeConnection c = new SqlCeConnection(
-            // Properties.Settings.Default.DataConnectionString))
-            //{
-            //    c.Open();
-            //    // 2
-            //    // Create new DataAdapter
-            //    using (SqlCeDataAdapter a = new SqlCeDataAdapter(
-            //        "SELECT * FROM Animals", c))
-            //    {
-            //        // 3
-            //        // Use DataAdapter to fill DataTable
-            //        DataTable t = new DataTable();
-            //        a.Fill(t);
-            //        // 4
-            //        // Render data onto the screen
-            //        dataGridView1.DataSource = t;
-            //    }
-            //}
+           
 
             //---------------------------------------------------------
 
