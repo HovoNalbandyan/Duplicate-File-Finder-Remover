@@ -21,7 +21,7 @@ namespace DFFR
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -34,12 +34,10 @@ namespace DFFR
             //Output.Columns.Add("Path ", typeof (string));
             //Output.Columns.Add("Name ", typeof(string));
             //Output.Columns.Add("Type ", typeof(string));
-           
-
-           List<string> myelements = new List<string>();
-            string name;
-            string path;
-            int count = 0;
+            List<string> myelements = new List<string>();
+            string name;                    //Name of value
+            string path;                   //Path for searching
+            int count = 0;                //Count of duplicate member
             path = textBox1.Text;
             name = textBox2.Text;
             DirectoryInfo di = new DirectoryInfo(path);
@@ -54,33 +52,29 @@ namespace DFFR
             {
                 MessageBox.Show("Input Name");
                 textBox2.Text = "";
-            }            
+            }
 
             if (di.Exists)
             {
-                
                 foreach (FileInfo file in arr)
                 {
                     if (name == file.Name)
-                    {                        
+                    {
                         myelements.Add(Name);
-                        
+                        count += 1;
                     }
-                    count += 1;
                     
                 }
+                MessageBox.Show(count.ToString());
             }
-
-            MessageBox.Show(count.ToString());
-
-           
-          
-           
+            else
+                MessageBox.Show(count.ToString());
+            
 
             //---------------------------------------------------------
 
         }
 
-        
+
     }
 }

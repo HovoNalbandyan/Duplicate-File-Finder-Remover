@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace DFFR2
 {
    
-    public partial class Form1 : Form
+    public partial class Form1 :Form
     {
-        Form1 f2 = new Form1();
+        
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace DFFR2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
