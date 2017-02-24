@@ -10,10 +10,31 @@ using System.Windows.Forms;
 using System.IO;
 
 
+
 namespace DFFR
 {
+
+   
     public partial class DFFR_Form : Form
     {
+
+        //static DataTable GetTable()
+        //{
+        //    // Here we create a DataTable with four columns.
+        //    DataTable table = new DataTable();        
+
+        //    // Here we add five DataRows.
+        //    table.Rows.Add(25, "Indocin", "David", DateTime.Now);
+        //    table.Rows.Add(50, "Enebrel", "Sam", DateTime.Now);
+        //    table.Rows.Add(10, "Hydralazine", "Christoff", DateTime.Now);
+        //    table.Rows.Add(21, "Combivent", "Janet", DateTime.Now);
+        //    table.Rows.Add(100, "Dilantin", "Melanie", DateTime.Now);
+        //    DataTable Output = new DataTable();
+        //    Output.Columns.Add("Path ", typeof(string));
+        //    Output.Columns.Add("Name1 ", typeof(string));
+        //    Output.Columns.Add("Type ", typeof(string));
+        //    return table;
+        //}
         public DFFR_Form()
         {
             InitializeComponent();
@@ -30,10 +51,6 @@ namespace DFFR
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //DataTable Output= new DataTable();
-            //Output.Columns.Add("Path ", typeof (string));
-            //Output.Columns.Add("Name ", typeof(string));
-            //Output.Columns.Add("Type ", typeof(string));
             List<string> myelements = new List<string>();
             string name;                    //Name of value
             string path;                   //Path for searching
@@ -69,7 +86,25 @@ namespace DFFR
             }
             else
                 MessageBox.Show(count.ToString());
-            
+            //foreach (DataRow row in GetTable().Rows)
+            //{
+            //    // Get first field by column index.
+            //    int weight = row.Field<int>(0);
+
+            //    // Get second field by column name.
+            //    string name1 = row.Field<string>("Name");
+
+            //    // Get third field by column index.
+            //    string code = row.Field<string>(2);
+
+            //    // Get fourth field by column name.
+            //    DateTime date = row.Field<DateTime>("Date");
+
+            //    // Display the fields.
+            //    Console.WriteLine("{0} {1} {2} {3}", weight, name1, code, date);
+            //}
+
+
 
             //---------------------------------------------------------
 
