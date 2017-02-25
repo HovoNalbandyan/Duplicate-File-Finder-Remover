@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data;
 
+
+
 namespace DFFR
 {
     static class Program
@@ -16,13 +18,9 @@ namespace DFFR
 
         static void Main()
         {
-
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DFFR_Form());
-
-
             
         }
        
